@@ -1,6 +1,6 @@
 # Tracking Machine Learning Experiments with MLFlow and Dockerizing the Best Model: German Car Price Prediction Case Study
 
-This project focuses on predicting the prices of German cars using the XGBoost algorithm. The dataset utilized for this experiment is the [Germany Cars Dataset](https://www.kaggle.com/datasets/ander289386/cars-germany), which has been preprocessed and cleaned for this machine learning task. XGBoost is employed to train a model on the dataset. Given its various parameters, I utilize [Hyperopt](http://hyperopt.github.io/hyperopt/) to search for the optimal settings. However, the code can easily accommodate other hyperparameter optimization libraries such as [Optuna](https://optuna.org/). To track experiments and record parameters, metrics, and models, MLflow is utilized.
+This project focuses on predicting the prices of Germany cars using the XGBoost algorithm. The dataset utilized for this experiment is the [Germany Cars Dataset](https://www.kaggle.com/datasets/ander289386/cars-germany), which has been preprocessed and cleaned for this machine learning task. XGBoost is employed to train a model on the dataset. Given its various parameters, I utilize [Hyperopt](http://hyperopt.github.io/hyperopt/) to search for the optimal settings. However, the code can easily accommodate other hyperparameter optimization libraries such as [Optuna](https://optuna.org/). To track experiments and record parameters, metrics, and models, MLflow is utilized.
 
 ### Install Dependencies
 Ensure you have installed the necessary libraries by running:
@@ -58,7 +58,7 @@ To test the model, requests can be sent to the REST API using the curl command:
 curl -d '{"dataframe_split": { "columns": ["make", "model", "fuel", "gear", "offerType", "mileage_log", "hp", "age"], "data": [["BMW", "118",   "Diesel", "Manual", "Used", 5.019116, 143.0, 10]]}}' -H 'Content-Type: application/json' -X POST localhost:5002/invocations
 ```
 
-which return the following result:
+which returns the following result:
 ```
 {"predictions": [3.950029134750366]}
 ```
