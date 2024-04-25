@@ -8,10 +8,10 @@ Ensure you have installed the necessary libraries by running:
 pip install -r requirements.txt
 ```
 
-### MLflow Server
+## MLflow Server
 An MLflow tracking server is essential for monitoring experiments and logging parameters and metrics. By default, the code assumes the URI of the MLflow server to be `http://localhost:8080`. If you are using a different server or port, you can modify the URI in the code.
 
-### Running the Experiment
+## Running the Experiment Using XGBoost
 To execute the experiment, run the following command:
 ```
 python run_experiment.py
@@ -42,7 +42,7 @@ If you have not changed the parameter `experiment_name`, you can view the experi
 
 Additionally, the best model, saved under the name `german-car-price-best-model`, can be found in the registered models tab.
 
-### Serve the Model
+## Serve the Model
 The registered model can be served using:
 ```
 mlflow models serve -m "models:/german-car-price-best-model/1" --port 5002
@@ -65,7 +65,7 @@ which return the following result:
 
 As the model is trained to predict the logarithm of price, the output is in logarithmic scale and should be converted back using `10**prediction`.
 
-### Build a Docker Image for the Model
+## Build a Docker Image for the Model
 To create a docker image for the registered model, use:
 ```
 mlflow models build-docker --model-uri "models:/german-car-price-best-model/1" --name "german-car-price"
@@ -73,6 +73,7 @@ mlflow models build-docker --model-uri "models:/german-car-price-best-model/1" -
 
 The docker image created, named `german-car-price`, can later be run locally, on a server, or on a cloud.
 
+<!---
 For a more detailed explanation of the code, refer to the accompanying Jupyter notebook file.
-
+--->
 
