@@ -1,4 +1,4 @@
-# Tracking Machine Learning Experiments with MLFlow and Dockerizing the Best Model: German Car Price Prediction Case Study
+# Tracking Machine Learning Experiments with MLflow and Dockerizing the Best Model: German Car Price Prediction Case Study
 
 This project focuses on predicting the prices of Germany cars using the XGBoost algorithm. The dataset utilized for this experiment is the [Germany Cars Dataset](https://www.kaggle.com/datasets/ander289386/cars-germany), which has been preprocessed and cleaned for this machine learning task. XGBoost is employed to train a model on the dataset. Given its various parameters, I utilize [Hyperopt](http://hyperopt.github.io/hyperopt/) to search for the optimal settings. However, the code can easily accommodate other hyperparameter optimization libraries such as [Optuna](https://optuna.org/). To track experiments and record parameters, metrics, and models, MLflow is utilized.
 
