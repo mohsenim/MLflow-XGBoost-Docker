@@ -73,7 +73,7 @@ mlflow models build-docker --model-uri "models:/german-car-price-best-model/1" -
 
 The docker image created, named `german-car-price`, can later be run locally, on a server, or on a cloud.
 
-<!---
-For a more detailed explanation of the code, refer to the accompanying Jupyter notebook file.
---->
+
+For a more detailed explanation of the code, refer to the accompanying Jupyter notebook file, `mlflow-xgboost-docker.ipynb`.
+
 
