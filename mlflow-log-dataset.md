@@ -293,7 +293,7 @@ display(metrics)
 </div>
 
 
-The code produces the following output. As we can see, based on our task (regression), MLflow automatically calculated several relevant metrics for us.
+As we can see, based on our task (regression), MLflow automatically calculated several relevant metrics for us.
 
 ## Looking at Results in the MLflow UI
 
